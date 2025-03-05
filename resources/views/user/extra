@@ -1,0 +1,151 @@
+ <form  class="ajaxForm form d-flex flex-column flex-lg-row" method="POST"
+                    action="{{route('admin.user.store')}}" >
+                    @csrf
+
+                    <!--begin::Main column-->
+                    <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+                        <!--begin:::Tabs-->
+                        <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold mb-n2">
+                            <!--begin:::Tab item-->
+                            <li class="nav-item">
+                                <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab"
+                                    href="#kt_ecommerce_add_User_general">General</a>
+                            </li>
+                            <!--end:::Tab item-->
+
+                        </ul>
+                        <!--end:::Tabs-->
+                        <!--begin::Tab content-->
+                        <div class="tab-content">
+                            <!--begin::Tab pane-->
+                            <div class="tab-pane fade show active" id="kt_ecommerce_add_User_general" role="tab-panel">
+                                <div class="d-flex flex-column gap-7 gap-lg-10">
+
+                                    <!--begin::General options-->
+                                    <div class="card card-flush py-4">
+                                        <!--begin::Card header-->
+                                        <div class="card-header d-flex jusrtify-content-between">
+                                            <div class="card-title">
+                                                <h2>General</h2>
+                                            </div>
+                                            <div class="col-md-4 ">
+                                                <!--begin::Label-->
+                                                <label class="form-label">Role</label>
+                                                <!--end::Label-->
+
+                                                <!--begin::Select2-->
+                                                <!--begin::Select2-->
+                                                <select class="form-select mb-2" data-control="select2"
+                                                    data-placeholder="Select an option" data-allow-clear="true"
+                                                    multiple="multiple">
+                                                    <option></option>
+                                                    <option value="Computers">Computers</option>
+                                                    <option value="Watches">Watches</option>
+                                                    <option value="Headphones">Headphones</option>
+                                                    <option value="Footwear">Footwear</option>
+                                                    <option value="Cameras">Cameras</option>
+                                                    <option value="Shirts">Shirts</option>
+                                                    <option value="Household">Household</option>
+                                                    <option value="Handbags">Handbags</option>
+                                                    <option value="Wines">Wines</option>
+                                                    <option value="Sandals">Sandals</option>
+                                                </select>
+                                                <!--end::Select2-->
+                                                <!--end::Select2-->
+                                            </div>
+                                        </div>
+                                        <!--end::Card header-->
+
+                                        <!--begin::Card body-->
+                                        <div class="card-body pt-0">
+                                            <!--begin::Input group-->
+                                            <div class="d-flex flex-column flex-md-row gap-5">
+                                                <div class="fv-row flex-row-fluid fv-plugins-icon-container">
+                                                    <input type="hidden" name="update_id" value="{{@$id->id}}" >
+                                                    <!--begin::Label-->
+                                                    <label class="required form-label">Name</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" name="name"
+                                                        placeholder="Enter name" value="{{@$id->name}}">
+                                                    <!--end::Input-->
+                                                    <div
+                                                        class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-row-fluid">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label">Email</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" name="email" value="{{@$id->email}}"
+                                                        placeholder="Enter Email Address">
+                                                    <!--end::Input-->
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column flex-md-row gap-5">
+                                                <div class="fv-row flex-row-fluid fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required form-label">Password</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <input class="form-control" name="password"
+                                                        placeholder="Enter password" value="">
+                                                    <!--end::Input-->
+                                                    <div
+                                                        class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-row-fluid">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label">Image</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <input type="file" class="form-control"
+                                                        name="image" placeholder="Address Line 2">
+                                                    <!--end::Input-->
+                                                </div>
+                                            </div>
+
+                                            <!--end::Input group-->
+                                        </div>
+                                        <!--end::Card header-->
+                                    </div>
+                                    <!--end::General options-->
+
+                                </div>
+                            </div>
+                            <!--end::Tab pane-->
+
+
+
+                        </div>
+                        <!--end::Tab content-->
+
+                        <div class="d-flex justify-content-end">
+                            <!--begin::Button-->
+                            <a href="Users.html" id="kt_ecommerce_add_User_cancel" class="btn btn-light me-5">
+                                Cancel
+                            </a>
+                            <!--end::Button-->
+
+                            <!--begin::Button-->
+                            <button type="submit" id="kt_ecommerce_add_User_submit" class="btn btn-primary">
+                                <span class="indicator-label">
+                                    Save Changes
+                                </span>
+                                <span class="indicator-progress">
+                                    Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                </span>
+                            </button>
+                            <!--end::Button-->
+                        </div>
+                    </div>
+                    <!--end::Main column-->
+                </form>
