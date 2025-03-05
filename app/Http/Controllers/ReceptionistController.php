@@ -4,14 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Branch;
 use App\Helpers\FileUploads;
-use App\Models\receptionist;
+use App\Models\Receptionist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\ReceptionFormRequest;
-use App\Policies\ReceptionistPolicy;
 use Illuminate\Support\Facades\Gate;
 
 class ReceptionistController extends Controller
